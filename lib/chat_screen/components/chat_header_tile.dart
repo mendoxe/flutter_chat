@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat/screens/components/user_avatar.dart';
 
 class ChatHeaderTile extends StatelessWidget {
   const ChatHeaderTile({
@@ -9,25 +10,21 @@ class ChatHeaderTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 35,
-          height: 35,
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            color: Colors.blue,
-          ),
+        const UserAvatar(
+          url:
+              "https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         ),
         const SizedBox(width: 12),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Redmond Sellig",
+              "Rhoana Martinez",
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             Text(
               "Last active on monday at 18:27",
-              style: Theme.of(context).textTheme.caption,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ],
         )
